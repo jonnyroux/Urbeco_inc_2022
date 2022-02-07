@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Materiaux{% endblock %}
+
+{% block body %}
+<div class="height"> 
+    <h1 class="h1prduit gris">Nos Matériaux à donner</h1>
+        <section class="produitAffiche">
+
+            
+        <div class="containerProduit"> 
+            
+            {% for materiaux in materiauxes %}
+                <div class="produitIndividuel">
+                <a class="lien" href="/materiaux/{{materiaux.materiauxid}}" >
+                <p class="nomProduit">{{ materiaux.nom }}</p></a>
+               
+                    
+                        
+                        
+                        
+                        <p>Quantité restante: {{ materiaux.quantite }}</p>
+                        
+                 </div>        
+                {% else %}
+               
+                        <p colspan="8">Aucun produit à afficher </p>
+                {% endfor %}        
+            
+        </div>
+        </section>
+</div>          
+
+    
+{% endblock %}
