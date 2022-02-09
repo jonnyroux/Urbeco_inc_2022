@@ -12,8 +12,8 @@ use Symfony\Component\HttpFoundation\Request;
 
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\JsonResponse;
 
 #[Route('/materiaux')]
 class MateriauxController extends AbstractController
@@ -131,12 +131,28 @@ class MateriauxController extends AbstractController
     public function delete(Request $request, Materiaux $materiaux, EntityManagerInterface $entityManager): Response
     {
         if ($this->isCsrfTokenValid('delete'.$materiaux->getId(), $request->request->get('_token'))) {
+                   //Suppression de l'image du disque dur lorsqu'on supprime un produit.
+           
+                   $image = $materiaux->getImage();
+
+                   if($image){
+                       foreach($image as $img){
+                           $nomImage = $this->getParameter("images_dir") . '/' . $img->getNom();
+       
+                           if(file_exists($nomImage)){
+                               unlink($nomImage);
+                           }
+                       }
+                   }
+                
             $entityManager->remove($materiaux);
             $entityManager->flush();
         }
 
         return $this->redirectToRoute('materiaux_index', [], Response::HTTP_SEE_OTHER);
     }
+
+
     #[Route('/supprime/image/{imageId}', name: 'materiaux_delete_image', methods: ['DELETE'])]
     public function deleteImage(Image $image, Request $request){
         $data = json_decode($request->getContent(), true);

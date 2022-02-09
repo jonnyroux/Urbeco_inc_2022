@@ -849,8 +849,8 @@ footer p:nth-of-type(3){
 }
 
 .botnform{    
-    background: rgba(191, 116, 128, 0.2);
-    border:   2px solid  #BF7480;
+    background-color:rgba(192, 193, 194,0.8);
+    border:   2px solid  #383737;
     border-radius: 5px;
     width:10%;
     height: 10%;
@@ -871,7 +871,7 @@ footer p:nth-of-type(3){
     width: 10%;
     margin-left: 45%;
     border-radius: 5px;
-    background: rgba(191, 116, 128, 0.2);
+    background-color:rgba(192, 193, 194,0.8);
     text-align: center;
     text-decoration: none;
     font-size: 16px;  
