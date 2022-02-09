@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Materiaux index{% endblock %}
+
+{% block body %}
+<section id="materiaux">
+    <h1>Materiaux à donner</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                
+                <th>Nom</th>
+                <th>Quantite</th>
+                <th>Description</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for materiaux in materiauxes %}
+            <tr>
+                
+                <td>{{ materiaux.nom }}</td>
+                <td>{{ materiaux.quantite }}</td>
+                <td>{{ materiaux.description }}</td>
+                <td>
+                    <a href="/materiaux/{{materiaux.materiauxid}}/edit">Voir</a>
+                    <a href="/materiaux/{{materiaux.materiauxid}}">Modifier</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">Aucun matériaux à donné pour l'instant</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('materiaux_new') }}">Créé nouveau matériaux à donner</a>
+    </section>
+{% endblock %}

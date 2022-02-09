@@ -3,6 +3,9 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use App\Entity\Image;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 
 /**
  * Materiaux
@@ -13,7 +16,7 @@ use Doctrine\ORM\Mapping as ORM;
 class Materiaux
 {
     /**
-     * @var int
+     
      *
      * @ORM\Column(name="materiaux_id", type="integer", nullable=false)
      * @ORM\Id
@@ -41,6 +44,24 @@ class Materiaux
      * @ORM\Column(name="description", type="string", length=255, nullable=false)
      */
     private $description;
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     *
+     * @ORM\OneToMany(targetEntity="Image", mappedBy="materiaux", orphanRemoval=true,cascade={"persist"})
+     
+     */
+    private $image;
+    public function __construct()
+    {
+        
+        $this->image = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->image_id = new ArrayCollection();
+    }
+
+    public function getId(): ?int
+    {
+        return $this->materiauxId;
+    }
 
     public function getMateriauxId(): ?int
     {
@@ -83,5 +104,36 @@ class Materiaux
         return $this;
     }
 
+    /**
+     * @return Collection|Image[]
+     */
+    public function getImage(): Collection
+    {
+        return $this->image;
+    }
+
+    public function addImage(Image $image): self
+    {
+        if (!$this->image->contains($image)) {
+            $this->image[] = $image;
+            $image->setMateriaux($this);
+        }
+
+        return $this;
+    }
+
+    public function removeImage(Image $image): self
+    {
+        if ($this->image->contains($image)) {
+            $this->image->removeElement($image);
+            // set the owning side to null (unless already changed)
+            if ($image->getMateriaux() === $this) {
+                $image->setMateriaux(null);
+            }
+        }
+
+        return $this;
+    }
+    
 
 }

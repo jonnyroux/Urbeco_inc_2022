@@ -14,7 +14,15 @@
                 <div class="produitIndividuel">
                 <a class="lien" href="/materiaux/{{materiaux.materiauxid}}" >
                 <p class="nomProduit">{{ materiaux.nom }}</p></a>
-               
+                {% for image in materiaux.image|slice(0, 1) %}
+                 
+                    <a href="/materiaux/{{materiaux.materiauxid}}" ><img src="{{ asset('images/images_produit/'~image.nom) }}" title="cliqué pour plus d'info" alt= "no" width="50%" ></a>
+
+                
+                    {% else %}
+                        <p>Pas d'image</p>
+                
+                {% endfor %}  
                     
                         
                         

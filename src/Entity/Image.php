@@ -37,13 +37,12 @@ class Image
     private $nom;
 
     /**
-     * @var \Materiaux
+     * @var Materiaux
      *
-     * @ORM\ManyToOne(targetEntity="Materiaux")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="materiaux_id", referencedColumnName="materiaux_id")
-     * })
-     */
+     * @ORM\ManyToOne(targetEntity="Materiaux", inversedBy="image")
+     * @ORM\JoinColumn(nullable=false, referencedColumnName="materiaux_id")
+     * */
+    
     private $materiaux;
 
     public function getImageId(): ?int
@@ -75,7 +74,7 @@ class Image
         return $this;
     }
 
-  /*  public function getMateriaux(): ?Materiaux
+    public function getMateriaux(): ?Materiaux
     {
         return $this->materiaux;
     }
@@ -87,5 +86,5 @@ class Image
         return $this;
     }
 
-*/
+
 }

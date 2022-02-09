@@ -5,9 +5,15 @@
 {% block body %}
     <h1>Edit Materiaux</h1>
 
-    {{ include('materiaux/_form.html.twig', {'button_label': 'Update'}) }}
+    {{ include('materiaux/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
 
-    <a href="{{ path('materiaux_index') }}">back to list</a>
+    <a class="botnform botnhov" href="{{ path('materiaux_index') }}">Retour à la liste</a>
 
     {{ include('materiaux/_delete_form.html.twig') }}
+{% endblock %}
+
+{% block javascripts %}
+
+    <script src="{{ asset('js/images.js') }}"></script>
+
 {% endblock %}
