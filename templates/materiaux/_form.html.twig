@@ -31,9 +31,7 @@
         {% for image in materiaux.image %}
             <div class="imageIndividuelle">
                 <img src="{{ asset('/images/images_produit/' ~ image.nom) }}" alt="Image" width="150">
-                <a href="{{ path('materiaux_delete_image', {imageId: image.imageId}) }}"
-                data-delete data-token="{{ csrf_token('delete' ~ image.imageId) }}">Supprimer</a>
-            </div>                          
+                            </div>                          
         {% endfor %}
     {% endif %}
         </div>     

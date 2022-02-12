@@ -152,8 +152,36 @@ class MateriauxController extends AbstractController
         return $this->redirectToRoute('materiaux_index', [], Response::HTTP_SEE_OTHER);
     }
 
+    #[Route('/{id}/image', name: 'materiaux_image_delete', methods: ['POST'])]
+    public function deleteImage(Request $request, Materiaux $materiaux,EntityManagerInterface $entityManager): Response
+    {
+        if ($this->isCsrfTokenValid('deleteimage'.$materiaux->getId(), $request->request->get('_token'))) {
+                   //Suppression de l'image du disque dur lorsqu'on supprime un produit.
+           
+                   $image = $materiaux->getImage();
 
-    #[Route('/supprime/image/{imageId}', name: 'materiaux_delete_image', methods: ['DELETE'])]
+                   if($image){
+                       foreach($image as $img){
+                           $nomImage = $this->getParameter("images_dir") . '/' . $img->getNom();
+       
+                           if(file_exists($nomImage)){
+                               unlink($nomImage);
+                               
+                           }
+                           $materiaux->removeImage($img);
+                       }
+
+                   }
+                
+                   $entityManager->remove($img);
+                   $entityManager->flush();
+        }
+                 $id=$materiaux->getId();
+        return $this->redirectToRoute('materiaux_edit',['id' => $id,], Response::HTTP_SEE_OTHER);
+    }
+   
+     
+  /*  #[Route('/supprime/image/{imageId}', name: 'materiaux_delete_image', methods: ['DELETE'])]
     public function deleteImage(Image $image, Request $request){
         $data = json_decode($request->getContent(), true);
         
@@ -169,6 +197,5 @@ class MateriauxController extends AbstractController
         }else{
             return new JsonResponse(['error' => 'Token Invalide'], 400);
         }
-   }
-
+    }*/
 }

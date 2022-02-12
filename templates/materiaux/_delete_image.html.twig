@@ -1,0 +1,4 @@
+<form method="post" action="/materiaux/{{materiaux.materiauxId}}/image" onsubmit="return confirm('etes vous sur de vouloir supprimer cest images?);">
+    <input type="hidden" name="_token" value="{{ csrf_token('deleteimage' ~ materiaux.materiauxId) }}">
+    <button class="botnform">Supprimer l'image'</button>
+</form>

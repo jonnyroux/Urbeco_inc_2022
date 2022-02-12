@@ -20,6 +20,7 @@ class MateriauxType extends AbstractType
             ->add('description')
             ->add('image', FileType::class, [
                 'label' => 'Image',
+                'required'=>false  ,
                 'mapped' => false,
                 'multiple' => true,
 
@@ -37,7 +38,7 @@ class MateriauxType extends AbstractType
                                         'image/jpeg',
                                         'image/png',
                                     ],
-                                    'mimeTypesMessage' => 'Please upload a valid format',
+                                    'mimeTypesMessage' => 'Veuiller télécharger un fichier valide',
                                 ]),
                             ],
                         ]),

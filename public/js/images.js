@@ -22,8 +22,7 @@ window.onload = () => {
                     body: JSON.stringify({"_token": this.dataset.token})
                 }).then(
                     //Recuperation en JSON
-                    response => response.json()
-                    
+                    response => response.json
                 ).then(data => {
                     if(data.success)
                         this.parentElement.remove()
