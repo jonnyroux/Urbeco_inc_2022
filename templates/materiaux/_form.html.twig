@@ -31,8 +31,11 @@
         {% for image in materiaux.image %}
             <div class="imageIndividuelle">
                 <img src="{{ asset('/images/images_produit/' ~ image.nom) }}" alt="Image" width="150">
+                <a href=""
+                >Supprimer</a>
                             </div>                          
         {% endfor %}
+        
     {% endif %}
         </div>     
     </div>

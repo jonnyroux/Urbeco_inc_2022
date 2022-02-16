@@ -1,9 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Edit Materiaux{% endblock %}
+{% block title %}Mise à jour Matériaux{% endblock %}
 
 {% block body %}
-    <h1>Edit Materiaux</h1>
+    <h1 class="h1 gris">Mise à jour Matériaux</h1>
 
     {{ include('materiaux/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
 
@@ -16,5 +16,5 @@
 {% block javascripts %}
 
     <script src="{{ asset('js/images.js') }}"></script>
-
+    
 {% endblock %}

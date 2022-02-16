@@ -783,12 +783,14 @@ footer p:nth-of-type(3){
 
 
 
-/* Formulaire ajout et edit produit */
+/* Formulaire ajout et edit */
 
 .h1 , .h2  {
     text-align: center;
-    margin-bottom: 10px;
+    
+    background-color:rgba(192, 193, 194,0.9);
 }
+
 
 .formProduit {
     grid-template-columns: repeat(2,1fr);
@@ -801,42 +803,64 @@ footer p:nth-of-type(3){
     margin-left: auto;
     grid-area: fA;
     padding: 10px;
-    grid-template-columns: repeat(5,1fr);
-    grid-template-rows: auto;
-    grid-template-areas: '. nomProduit nomProduit nomProduit .'
-                         '. description description description.'
-                         '. prix . inventaire .'
-                         '. promotion .  vedette .' ;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3,1fr);
+    grid-template-areas: 'nomProduit'
+                         'description'
+                         'inventaire';
+   margin-right:45px ;
+}
+ .formProduit input {
+    float: right;
 
 }
-
+.formProduit label{
+    float : left;
+    font-weight: normal;
+    padding:5px;
+    
+}
+#materiaux_description{
+    width: 400px; 
+    height: 40px;
+    align-items: flex-start;
+     
+  }
+  #materiaux_quantite{
+      width: 400px; 
+     height: 40px;
+  }
+  #materiaux_nom{
+      width: 400px; 
+      height: 40px;
+  }
 .nomProduit{
     grid-area: nomProduit;
-    
+    font-size: 32px;
+   
 }
 
 .description{
     grid-area: description;
-    
+    font-size: 32px;
+    text-align: left;
 }
 
-.prix{
-    grid-area: prix;
-    
+.formProduit .image{
+    font-size: 24px;
+    background-color:rgba(192, 193, 194,0.8);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
 }
 
 .inventaire{
     grid-area: inventaire;
-    
+    font-size: 32px;
+    text-align: left;
 }
 
-.promotion{
-    grid-area: promotion;
-}
 
-.vedette{
-    grid-area: vedette;
-}
 
 .formImage {
     width: 90%;

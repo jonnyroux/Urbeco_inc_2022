@@ -152,7 +152,7 @@ class MateriauxController extends AbstractController
         return $this->redirectToRoute('materiaux_index', [], Response::HTTP_SEE_OTHER);
     }
 
-    #[Route('/{id}/image', name: 'materiaux_image_delete', methods: ['POST'])]
+    #[Route('/{id}/image', name: 'materiaux_delete_image', methods: ['POST'])]
     public function deleteImage(Request $request, Materiaux $materiaux,EntityManagerInterface $entityManager): Response
     {
         if ($this->isCsrfTokenValid('deleteimage'.$materiaux->getId(), $request->request->get('_token'))) {
@@ -173,7 +173,7 @@ class MateriauxController extends AbstractController
 
                    }
                 
-                   $entityManager->remove($img);
+                  
                    $entityManager->flush();
         }
                  $id=$materiaux->getId();

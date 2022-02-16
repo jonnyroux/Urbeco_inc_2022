@@ -22,7 +22,11 @@ function displayPics() {
   
 }
 
+function afficherSuprimerImg(){
+  document.getElementById('suppImg').style.visibility='false';
 
+  getFocus();
+}
 
 // appeler la fonction au chargement de la page
 
