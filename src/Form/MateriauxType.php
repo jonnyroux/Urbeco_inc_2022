@@ -9,6 +9,7 @@ use Symfony\Component\Validator\Constraints\All;
 use Symfony\Component\Validator\Constraints\File;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
 class MateriauxType extends AbstractType
 {
@@ -17,7 +18,8 @@ class MateriauxType extends AbstractType
         $builder
             ->add('nom')
             ->add('quantite')
-            ->add('description')
+            ->add('description',TextareaType::class, [
+                'attr' => ['rows' => 6]    ])
             ->add('image', FileType::class, [
                 'label' => 'Image',
                 'required'=>false  ,

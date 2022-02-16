@@ -22,16 +22,12 @@ function displayPics() {
   
 }
 
-function afficherSuprimerImg(){
-  document.getElementById('suppImg').style.visibility='false';
 
-  getFocus();
-}
 
 // appeler la fonction au chargement de la page
 
-window.onload = displayPics;
+window.onload = displayPics  ;
 
-// pour permettre de remplir le panier de l'utilisatrice
+
 
 

@@ -804,7 +804,7 @@ footer p:nth-of-type(3){
     grid-area: fA;
     padding: 10px;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(3,1fr);
+    grid-template-rows: repeat(3,auto);
     grid-template-areas: 'nomProduit'
                          'description'
                          'inventaire';
@@ -822,8 +822,9 @@ footer p:nth-of-type(3){
 }
 #materiaux_description{
     width: 400px; 
-    height: 40px;
+    float: right;
     align-items: flex-start;
+    margin-bottom: 20px;
      
   }
   #materiaux_quantite{
@@ -913,7 +914,11 @@ footer p:nth-of-type(3){
     text-align: center;
 }
 
+.visible{
+    visibility:visible
+}
 
-
-
+#suppImg{
+    visibility: hidden;
+}
 
