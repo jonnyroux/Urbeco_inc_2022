@@ -8,33 +8,39 @@ use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use App\Entity\Image;
 
+
 /**
- * @ORM\Entity(repositoryClass=ProjetRepository::class)
+ * Projet
+ *
  * @ORM\Table(name="projet")
  * @ORM\Entity
  */
 class Projet
 {
-    
-
     /**
-          
-    * @ORM\Column(name="projetId", type="integer", nullable=false)
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
-     * */
-    private $projetId;
+     */
+    private $Id;
 
     /**
-     * 
-     * @ORM\Column(type="string", length=50)
+     * @var string
+     *
+     * @ORM\Column(name="titre", type="string", length=50, nullable=false)
      */
     private $titre;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @var string
+     *
+     * @ORM\Column(name="description", type="string", length=255, nullable=false)
      */
     private $description;
+
+
 
     /**
      * @var \Doctrine\Common\Collections\Collection
@@ -50,20 +56,10 @@ class Projet
 
     public function getId(): ?int
     {
-        return $this->projetId;
+        return $this->Id;
     }
 
-    public function getProjetId(): ?int
-    {
-        return $this->projetId;
-    }
-
-    public function setProjetId(int $projetId): self
-    {
-        $this->projetId = $projetId;
-
-        return $this;
-    }
+    
 
     public function getTitre(): ?string
     {

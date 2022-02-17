@@ -20,7 +20,7 @@
             </tr>
             <tr>
                 <th>ProjetId</th>
-                <td>{{ projet.projetId }}</td>
+                <td>{{ projet.Id }}</td>
             </tr>
             <tr>
                 <th>Titre</th>
@@ -35,7 +35,7 @@
 
     <a href="{{ path('projet_index') }}">back to list</a>
 
-    <a href="{{ path('projet_edit', {'id': projet.id}) }}">edit</a>
+    <a href="{{ path('projet_edit', {'id': projet.Id}) }}">edit</a>
 
     {{ include('projet/_delete_form.html.twig') }}
 {% endblock %}
