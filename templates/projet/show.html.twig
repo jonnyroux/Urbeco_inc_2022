@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Projet{% endblock %}
+
+{% block body %}
+    <h1>Projet</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+               {% for image in projet.image|slice(0, 1) %}
+                 
+                    <a href="" ><img src="{{ asset('images/images_produit/'~image.nom) }}" title="cliqué pour plus d'info" alt= "no" width="50%" ></a>
+
+                
+                    {% else %}
+                        <p>Pas d'image</p>
+                
+                {% endfor %} 
+            </tr>
+            <tr>
+                <th>ProjetId</th>
+                <td>{{ projet.projetId }}</td>
+            </tr>
+            <tr>
+                <th>Titre</th>
+                <td>{{ projet.titre }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ projet.description }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('projet_index') }}">back to list</a>
+
+    <a href="{{ path('projet_edit', {'id': projet.id}) }}">edit</a>
+
+    {{ include('projet/_delete_form.html.twig') }}
+{% endblock %}

@@ -45,6 +45,11 @@ class Image
     
     private $materiaux;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Projet::class, inversedBy="image_id")
+     */
+    private $projet;
+
     public function getImageId(): ?int
     {
         return $this->imageId;
@@ -82,6 +87,18 @@ class Image
     public function setMateriaux(?Materiaux $materiaux): self
     {
         $this->materiaux = $materiaux;
+
+        return $this;
+    }
+
+    public function getProjet(): ?Projet
+    {
+        return $this->projet;
+    }
+
+    public function setProjet(?Projet $projet): self
+    {
+        $this->projet = $projet;
 
         return $this;
     }
