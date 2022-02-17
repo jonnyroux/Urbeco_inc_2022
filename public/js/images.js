@@ -2,8 +2,10 @@ window.onload = () => {
     // Gestion des boutons supprimer pour image//
     //let links = document.querySelectorAll("[data-delete]")
      var image_materiaux = document.getElementsByClassName('images_materiaux');
-     
- 
+     var image_projet = document.getElementsByClassName('carousel-item')
+        if(image_projet !=null)
+        console.log(image_projet.length)
+          image_projet[0].classList.add('active');
         
         if(image_materiaux.length > 0)
         document.getElementById('suppImg').style.visibility='visible';

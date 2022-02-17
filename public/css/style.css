@@ -693,12 +693,12 @@ dl#photo img {
 
 /*               css du footer   */
 
-footer{
+.foot{
      
-    
+    display: grid ;
     font-size: 20px;
     background-color:rgba(192, 193, 194,0.9);
-   display: grid ;
+   
    grid-template-rows: auto;
     grid-template-columns: repeat(6,1fr) ;
     grid-template-areas: 'a b c d e f ';
@@ -922,3 +922,17 @@ footer p:nth-of-type(3){
     visibility: hidden;
 }
 
+#demo{
+    align-items: center;
+    text-align: center;
+}
+
+#projet_descript{
+    font-size: 30px;
+}
+
+.this{
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}

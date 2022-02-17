@@ -26,7 +26,20 @@ function displayPics() {
 
 // appeler la fonction au chargement de la page
 
-window.onload = displayPics  ;
+window.onload = () => {
+  displayPics()
+  // Gestion des boutons supprimer pour image//
+  //let links = document.querySelectorAll("[data-delete]")
+  
+   var image_projet = document.getElementsByClassName('carousel-item')
+      if(image_projet !=null)
+      console.log(image_projet.length)
+        image_projet[0].classList.add('active');
+
+}
+
+
+
 
 
 
