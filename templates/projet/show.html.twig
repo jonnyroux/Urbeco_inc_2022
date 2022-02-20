@@ -3,33 +3,33 @@
 {% block title %}Projet{% endblock %}
 
 {% block body %}
-    <h1>Nos Projets</h1>
+    <h1 class="h1show gris">Nos réalisations en quelques images!</h1>
 
-    <div id="demo" class="carousel slide"  data-interval="5000">
+    <div id="demo" class="carousel slide "  data-interval="10000">
 
    
   <!-- The slideshow -->
-  <div class="carousel-inner">
+  <div class="carousel-inner gris">
    {% for image in projet.image %}
     <div class="carousel-item ">
-    <img src="{{ asset('images/images_produit/'~image.nom) }}"  alt="Los Angeles" width="600" height="400">
+    <img src="{{ asset('images/images_produit/'~image.nom) }}"  alt="Image" width="600" height="600">
     </div>
     {% endfor %}     
   </div>
   
   <!-- Left and right controls -->
-  <a class="carousel-control-prev" href="#demo" data-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
+  <a class="carousel-control-prev " href="#demo" data-slide="prev">
+    <span class="	carousel-control-prev-icon sizeIcon"></span>
   </a>
-  <a class="carousel-control-next" href="#demo" data-slide="next">
-    <span class="carousel-control-next-icon"></span>
+  <a class="carousel-control-next " href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon sizeIcon"></span>
   </a>
 </div>
  <div  class="this">
-            <div class="text">
-                <h1  id="product_title">{{ projet.titre }}</h1>
+            <div class="text gris">
+                <h1  id="projet_title">{{ projet.titre }}</h1>
                 <p id="projet_descript">{{ projet.description }}</p>
-                
-            </div>
+   </div>             
+</div>
  
 {% endblock %}

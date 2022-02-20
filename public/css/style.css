@@ -350,15 +350,16 @@ label[for = "registration_form_agreeTerms"]{
    #formcontact #contactligne3 label {
        
         align-self: center;
-   
+        
+    }
+    #formcontact #contactligne3 input {
+       
+        align-self: center;
+        width: 400px; 
+        height: 135px; 
+           margin-top: 50px;
     }
    
-   #contact_message{
-     width: 400px; 
-     height: 135px;
-      margin-top: 50px;
-      
-   }
    #contact_email{
        width: 300px; 
       height: 30px;
@@ -369,6 +370,7 @@ label[for = "registration_form_agreeTerms"]{
    }
    #contact_tel{
        height: 30px;
+       width: 300px;
    }
    #contactligne1{
        grid-area: a;
@@ -383,14 +385,12 @@ label[for = "registration_form_agreeTerms"]{
    #contactligne3{
         
        grid-area: c;
-       align-items:baseline;
+       align-items:center;
        
        
    }
-   #tel{
-       width: 10%;
-       background: transparent;
-   }
+   
+  
    #contactligne4{
        visibility: hidden;
        grid-area: e;
@@ -706,7 +706,7 @@ dl#photo img {
       align-items: center;                   
     
     margin: 10px;
-    padding: 5px;
+    
 }
 footer div:first-of-type{
     grid-area: a;
@@ -735,7 +735,7 @@ footer p:nth-of-type(2){
 }
 footer p:nth-of-type(3){
     grid-area: f;
-   text-align: left;
+ 
 }
 
 
@@ -929,10 +929,19 @@ footer p:nth-of-type(3){
 
 #projet_descript{
     font-size: 30px;
+    text-align: justify;
 }
 
 .this{
-    align-items: center;
+   
     text-align: center;
     width: 100%;
+}
+.sizeIcon{
+    font-size: 48px;
+    color: black;
+}
+.h1show{
+    text-align: center;
+
 }
