@@ -1,40 +1,39 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Projet index{% endblock %}
+{% block title %}Nos réalisation{% endblock %}
 
 {% block body %}
-    <h1>Projet index</h1>
+<div class="height"> 
+    <h1 class="h1prduit gris">Nos réalisations en images</h1>
+    
+        <section class="produitAffiche">
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                
-                <th>Titre</th>
-                <th>Description</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for projet in projets %}
-            <tr>
-                
-                <td>{{ projet.Id }}</td>
-                <td>{{ projet.titre }}</td>
-                <td>{{ projet.description }}</td>
-                
-                <td>
-                    <a href="{{ path('projet_show', {'id': projet.Id}) }}">show</a>
-                    <a href="{{ path('projet_edit', {'id': projet.Id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="5">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+            
+        <div class="containerProduit"> 
+            
+            {% for projet in projets %}
+                <div class="produitIndividuel">
+                <a class="lien" href="/projet/{{projet.id}}" >
+                <p class="nomProduit">{{ projet.titre }}</p></a>
+                {% for image in projet.image|slice(0, 1) %}
+                 
+                    <a href="/projet/{{projet.id}}" ><img src="{{ asset('images/images_produit/'~image.nom) }}" title="cliqué pour plus d'info" alt= "no" width="50%" ></a>
 
-    <a href="{{ path('projet_new') }}">Create new</a>
+                
+                    {% else %}
+                        <p>Pas d'image</p>
+                
+                {% endfor %}  
+                    
+                 </div>        
+                {% else %}
+               
+                        <p colspan="8">Aucun projet à afficher </p>
+                {% endfor %}        
+            
+        </div>
+        </section>
+</div>          
+
+    
 {% endblock %}

@@ -32,10 +32,12 @@ window.onload = () => {
   //let links = document.querySelectorAll("[data-delete]")
   
    var image_projet = document.getElementsByClassName('carousel-item')
-      if(image_projet !=null)
+      if (image_projet !=null){
+        if(image_projet.length > 0){
       console.log(image_projet.length)
         image_projet[0].classList.add('active');
-
+}
+}
 }
 
 
