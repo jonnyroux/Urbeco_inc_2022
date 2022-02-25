@@ -52,7 +52,7 @@ nav ul{
     list-style-type: none; 
     grid-template-rows: auto;  
     grid-template-columns: repeat(7,1fr) ;
-    grid-template-areas: ". realisation service a_propos contact langue ." ;
+    grid-template-areas: ". realisation service a_propos contact materiaux connexion" ;
     column-gap: 15px;
 }
 
@@ -98,8 +98,11 @@ nav li > a {
     grid-area: contact;
 }
 
-#langue{
-    grid-area: langue;
+#mat{
+    grid-area: materiaux;
+}
+#connexion{
+    grid-area: connexion;
 }
 
 /* css page login*/
@@ -109,16 +112,17 @@ nav li > a {
     
 }
 #loginform{
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(3,1fr);
     grid-template-rows:auto;
-    grid-template-areas: 'gauche droite';
+    grid-template-areas: 'gauche centre droite';
     align-items: center;
     margin-top: 40px;
 }
 
 
 #infologin{
-    grid-area: droite;
+
+    grid-area: centre;
     grid-template-columns: repeat(4,1fr);
     grid-template-rows:repeat(5,auto);
     grid-template-areas: 'a a a a'
@@ -128,7 +132,7 @@ nav li > a {
                          'q s s t ';
     align-items: center;
     text-align: center;
-    margin-right: 30px;
+   
     
 
 }
@@ -139,23 +143,27 @@ nav li > a {
 #h1connexion{
     grid-area: f;
     margin:20px;
+    font-size: 34px;
 }
 #lbluserconnexion{
     grid-area: i;
-    margin:20px;
+   
 }
 #inputUsername{
     grid-area: j;
-    margin:20px;
+    margin-right:20px;
+    width: 400px;
     text-align: center;
 }
 #lblpasswordconnexion{
     grid-area: m;
-    margin:20px;
+  
 }
 #inputPassword{
     grid-area: o;
-    margin:20px;
+    margin-top:20px;
+    margin-right:20px;
+    width: 400px;
     text-align: center;
 }
 #imagelogin{
@@ -166,6 +174,8 @@ grid-area: gauche;
     grid-area: s;
     margin:20px;
     height: 30px;
+     width: 200px;
+    text-align: center;
 }
 
 #logoconnexion{
@@ -175,11 +185,7 @@ grid-area: gauche;
 }
 
 
-#btnconnexion{
-    background: rgba(191, 116, 128, 0.2);
-    border:     #BF7480;
-    width: 200px;
-}
+
 /* css page register*/
 
 #register{
@@ -694,7 +700,10 @@ dl#photo img {
 /*               css du footer   */
 
 .foot{
-     
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
     display: grid ;
     font-size: 20px;
     background-color:rgba(192, 193, 194,0.9);
