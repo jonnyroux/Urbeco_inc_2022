@@ -31,6 +31,7 @@ class MateriauxController extends AbstractController
     #[Route('/admin', name: 'materiaux_indexAdmin', methods: ['GET'])]
     public function indexAmin(MateriauxRepository $materiauxRepository): Response
     {
+        $this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
         return $this->render('materiaux/indexAdmin.html.twig', [
             'materiauxes' => $materiauxRepository->findAll(),
         ]);
@@ -39,6 +40,7 @@ class MateriauxController extends AbstractController
     #[Route('/new', name: 'materiaux_new', methods: ['GET', 'POST'])]
     public function new(Request $request, EntityManagerInterface $entityManager): Response
     {
+        $this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
         $materiaux = new Materiaux();
         $form = $this->createForm(MateriauxType::class, $materiaux);
         $form->handleRequest($request);
@@ -90,6 +92,7 @@ class MateriauxController extends AbstractController
     #[Route('/{id}/edit', name: 'materiaux_edit', methods: ['GET', 'POST'])]
     public function edit(Request $request, Materiaux $materiaux, EntityManagerInterface $entityManager): Response
     {
+        $this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
         $form = $this->createForm(MateriauxType::class, $materiaux);
         $form->handleRequest($request);
 
@@ -130,6 +133,7 @@ class MateriauxController extends AbstractController
     #[Route('/{id}', name: 'materiaux_delete', methods: ['POST'])]
     public function delete(Request $request, Materiaux $materiaux, EntityManagerInterface $entityManager): Response
     {
+        $this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
         if ($this->isCsrfTokenValid('delete'.$materiaux->getId(), $request->request->get('_token'))) {
                    //Suppression de l'image du disque dur lorsqu'on supprime un produit.
            
