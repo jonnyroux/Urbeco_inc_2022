@@ -16,6 +16,8 @@
     </div>
        
     
+<script src="https://kit.fontawesome.com/cedb8ea0d9.js" crossorigin="anonymous"></script>
+
 
 </header>
 

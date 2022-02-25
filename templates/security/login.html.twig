@@ -2,6 +2,8 @@
 
 {% block title %}Connexion{% endblock %}
 
+
+
 {% block body %}
 
 <section class=" height pagelogin grille">
@@ -15,8 +17,8 @@
         {% endif %}
 
          {% if app.user %}
-             <div id="connecter" class="mb-3" id="mb-3">
-            Vous êtes connecté en tant que {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
+             <div id="connecter" class="mb-3 " id="mb-3">
+            Vous êtes connecté en tant que {{ app.user.username }}, <a class="fa-solid fa-user-xmark"  href="{{ path('app_logout') }}">Logout</a>
              </div>
          {% endif %}
 
