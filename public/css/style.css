@@ -746,7 +746,11 @@ footer p:nth-of-type(3){
 
 
 /* CSS produits */
-
+.produitIndividuel .img{
+    padding: 5px;
+    margin-bottom: 5px;
+   
+}
 .h1prduit{
     text-align: center;
     font-size: 45px;
@@ -754,8 +758,9 @@ footer p:nth-of-type(3){
 
 .containerProduit{
     display: flex;
-    width: 90%;
-    margin: 5%;
+    width: 100%;
+    margin: 5px;
+    padding: 10px;
     flex-wrap: wrap;
     align-content: center;    
 }
@@ -763,10 +768,11 @@ footer p:nth-of-type(3){
 .produitIndividuel{
     display: block;
     width: 20%;
-    margin: 2%;
+    margin: 25px;
     background-color:rgba(192, 193, 194,0.9);
     text-align: center;
     flex-shrink: 0;
+    padding: 20px;
     
 
 }
@@ -781,9 +787,7 @@ footer p:nth-of-type(3){
     font-weight: bold;
 }
 
-.enPromo{
-    color: red;
-}
+
 
 
 

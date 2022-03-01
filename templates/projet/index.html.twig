@@ -15,9 +15,11 @@
                 <div class="produitIndividuel">
                 <a class="lien" href="/projet/{{projet.id}}" >
                 <p class="nomProduit">{{ projet.titre }}</p></a>
-                {% for image in projet.image|slice(0, 1) %}
+                {% for image in projet.image|slice(0,1 ) %}
                  
-                    <a href="/projet/{{projet.id}}" ><img src="{{ asset('images/images_produit/'~image.nom) }}" title="cliqué pour plus d'info" alt= "no" width="50%" ></a>
+                    <a href="/projet/{{projet.id}}" >
+                    <img class="img" src="{{ asset('images/images_produit/'~image.nom) }}" title="cliqué pour plus d'info" alt= "no" width="50%" >
+                    </a>
 
                 
                     {% else %}
