@@ -26,6 +26,15 @@ class ProjetController extends AbstractController
         ]);
     }
 
+    #[Route('/admin', name: 'projet_indexAdmin', methods: ['GET'])]
+    public function indexAmin(ProjetRepository $projetRepository): Response
+    {
+        $this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
+        return $this->render('projet/indexAdmin.html.twig', [
+            'projets' => $projetRepository->findAll(),
+        ]);
+    }
+
     #[Route('/new', name: 'projet_new', methods: ['GET', 'POST'])]
     public function new(Request $request, EntityManagerInterface $entityManager): Response
     {

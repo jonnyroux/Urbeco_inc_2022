@@ -1,5 +1,10 @@
 // pour la page de la galerie produit vue par l'utilisatrice
+function hide(){
+  var connexion=document.getElementById('connexion')
+  connexion.classList.add('hidden');
 
+  
+}
 function displayPics() {
 
   var liens = document.getElementsByClassName('mini_pict'); // variable tous les liens contenu dans galerie_mini
@@ -30,7 +35,8 @@ window.onload = () => {
   displayPics()
   // Gestion des boutons supprimer pour image//
   //let links = document.querySelectorAll("[data-delete]")
-  
+   
+    
    var image_projet = document.getElementsByClassName('carousel-item')
       if (image_projet !=null){
         if(image_projet.length > 0){

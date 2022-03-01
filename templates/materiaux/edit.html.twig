@@ -8,9 +8,10 @@
     {{ include('materiaux/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
 
     <a class="botnform botnhov" href="{{ path('materiaux_index') }}">Retour à la liste</a>
-
+  
     {{ include('materiaux/_delete_form.html.twig') }}
     {{ include('materiaux/_delete_image.html.twig') }}
+  
 {% endblock %}
 
 {% block javascripts %}

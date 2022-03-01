@@ -23,6 +23,7 @@ class MateriauxController extends AbstractController
     #[Route('/', name: 'materiaux_index', methods: ['GET'])]
     public function index(MateriauxRepository $materiauxRepository): Response
     {
+      
         return $this->render('materiaux/index.html.twig', [
             'materiauxes' => $materiauxRepository->findAll(),
         ]);
@@ -36,6 +37,8 @@ class MateriauxController extends AbstractController
             'materiauxes' => $materiauxRepository->findAll(),
         ]);
     }
+
+   
 
     #[Route('/new', name: 'materiaux_new', methods: ['GET', 'POST'])]
     public function new(Request $request, EntityManagerInterface $entityManager): Response

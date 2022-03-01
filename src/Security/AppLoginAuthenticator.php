@@ -50,7 +50,7 @@ class AppLoginAuthenticator extends AbstractLoginFormAuthenticator
         }
 
         // For example:
-        return new RedirectResponse($this->urlGenerator->generate('materiaux_indexAdmin'));
+        return new RedirectResponse($this->urlGenerator->generate('projet_new'));
         throw new \Exception('TODO: provide a valid redirect inside '.__FILE__);
     }
 
