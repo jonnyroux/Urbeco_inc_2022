@@ -19,14 +19,13 @@
     </div>
 
     <div class="formImage grille"> 
-        <div class="formulaire image">
-        {{ form_row(form.image) }}
+        <div class="formulaire image ">
+        <i class="fa-solid fa-file-arrow-up"></i>{{ form_row(form.image) }}
         </div>
 
    {# verifier la route pour "edit" #}
 
     {% if app.request.attributes.get('_route') == 'materiaux_edit' %}
-        <h2 class="h2">Images<h2>
         <div class="imageProduit">
         {% for image in materiaux.image %}
             <div class="imageIndividuelle">

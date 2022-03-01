@@ -23,10 +23,10 @@
          {% endif %}
 
     <h1 class="h3 mb-3 font-weight-normal" id="h1connexion" >Veuiller vous identifié. </h1>
-    <label for="inputUsername" id="lbluserconnexion">Nom D'utilisateur</label>
-    <input type="text" value="{{ last_username }}" name="username" id="inputUsername" class="form-control" autocomplete="username" required autofocus>
-    <label for="inputPassword" id="lblpasswordconnexion">Mot de passe</label>
-    <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
+    <label for="inputUsername" id="lbluserconnexion" class="fa-solid fa-user">   Nom D'utilisateur</label>
+    <input type="text" value="{{ last_username }}" name="username" id="inputUsername" class="form-control " autocomplete="username" required autofocus>
+    <label for="inputPassword" id="lblpasswordconnexion" class="fa-solid fa-lock">  Mot de passe</label>
+    <input type="password" name="password" id="inputPassword" class="form-control " autocomplete="current-password" required>
 
     <input type="hidden" name="_csrf_token" id="token"
            value="{{ csrf_token('authenticate') }}">
