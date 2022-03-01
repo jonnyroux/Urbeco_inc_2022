@@ -513,7 +513,7 @@ label[for = "registration_form_agreeTerms"]{
                          'c c c'
                          'd d d';   
     text-align: center;
-    align-items: center;
+ 
     font-size: 30px;
     background-color:rgba(192, 193, 194,0.8);
 }
@@ -525,6 +525,7 @@ label[for = "registration_form_agreeTerms"]{
     border-collapse: collapse;
    border: 1px solid black;
    grid-area: c;
+   
 }
 th,td{
     text-align: center;
@@ -645,46 +646,6 @@ dl#photo img {
 #quantite{
     text-align: center;
 }
-
-/** inventaire **/
-
-.inventaire h1, .commande h1{
-    text-align: center;
-    margin:25px;
-}
-
-.inventaire table, .commande table{
-    width: 60%;
-    margin:auto;
-    border-collapse: collapse;    
-}
-
-.inventaire th, .commande th{
-    text-align: left;
-    border: 1px solid black;
-    padding-left: 4px;
-    background-color: #fff5ee;
-}
-
-.inventaire td, .commande td{
-    text-align: left;
-    border: 1px solid black;
-    padding-left: 4px;
-    background-color: #fff5ee;
-    
-}
-
-.newA {
-    margin-left: 20%;
-}
-
-.inventaire tr, .commande tr {
-    height: 2em;
-    
-}
-
-
-
 
 
 
@@ -911,6 +872,7 @@ footer p:nth-of-type(3){
 .formImage {
     width: 90%;
     margin-right:auto ;
+    align-items: center;
     grid-area: fI;
 }
 
