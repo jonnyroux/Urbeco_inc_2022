@@ -841,7 +841,7 @@ footer p:nth-of-type(3){
       width: 400px; 
      height: 40px;
   }
-  #materiaux_nom{
+  #materiaux_nom,#projet_titre{
       width: 400px; 
       height: 40px;
   }
@@ -849,6 +849,10 @@ footer p:nth-of-type(3){
     grid-area: nomProduit;
     font-size: 32px;
    
+}
+#projet_description{
+   float: right;
+   width: 400px; 
 }
 
 .description{
