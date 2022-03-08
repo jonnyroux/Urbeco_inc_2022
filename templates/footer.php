@@ -3,13 +3,12 @@
 <div class="fa-solid fa-mobile-screen-button">
 </div>
 <p id="call">APPELEZ-NOUS : </br>
-             Tél: 819-674-6393 </br>
+             819-674-6393 </br>
             </p>
 
 <div class="fa-solid fa-envelope">
 </div>
-<p> COURRIEL :  </br>
-    duclos_construction@outlook.com </p>
+<p>  duclos_construction@outlook.com </p>
 <div class="fa-solid fa-clock">
 </div>
     <p >HEURES D'OUVERTURE </br>

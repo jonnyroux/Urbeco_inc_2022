@@ -46,7 +46,8 @@ class Image
     private $materiaux;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Projet::class, inversedBy="image_id")
+     * @var Projet
+     * @ORM\ManyToOne(targetEntity=Projet::class, inversedBy="image")
      */
     private $projet;
 

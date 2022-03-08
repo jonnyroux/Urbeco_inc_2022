@@ -211,11 +211,7 @@ grid-area: gauche;
     text-align: center;
 }
 
-#logoconnexion{
-    width: 500px;
-    height: 350px;
-   
-}
+
 
 
 
@@ -927,7 +923,7 @@ dl#photo img {
     grid-template-areas: 'a b c d e f g h i'
                                         ;
      text-align: center;                    
-      align-items: center;                   
+      align-items: baseline;                   
     
 
     
@@ -972,3 +968,4 @@ footer p:nth-of-type(4){
     grid-area: h;
  
 }
+
