@@ -20,7 +20,7 @@ final class Version20220303191038 extends AbstractMigration
     public function up(Schema $schema): void
     {
         // this up() migration is auto-generated, please modify it to your needs
-        $this->addSql('ALTER TABLE image CHANGE materiaux_id materiaux_id INT NOT NULL');
+        $this->addSql('ALTER TABLE image CHANGE materiaux_id materiaux_id INT DEFAULT NULL');
     }
 
     public function down(Schema $schema): void
