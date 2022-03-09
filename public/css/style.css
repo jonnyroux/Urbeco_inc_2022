@@ -8,7 +8,7 @@
 body{
 background-color: #656662;  
 background-image: url("../images/architecture-1857175__480.jpg");
-height: 90%;
+width: 100%;
 background-size: cover;
 }
 
@@ -969,3 +969,198 @@ footer p:nth-of-type(4){
  
 }
 
+@media only screen and (max-width: 600px) {
+    body{
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        padding: 15px;
+    }
+    header{
+        width: 100%;
+        align-items: center;
+         align-self: center;
+         text-align: center;
+         
+    }
+    #logo{
+        width: 100%; 
+        background-color:transparent;
+        display: grid;
+        grid-template-rows: repeat(2,1fr);
+        grid-template-columns:100%;
+        grid-template-areas: 'logo'
+                            'nav';
+        
+        
+        align-items: center;
+        align-self: center;
+        
+    }
+    #logo img {
+        
+       width: 100%;
+       grid-area: logo;
+       margin-left: 0px;
+      
+    }
+     nav{
+         width: 100%;
+         grid-area: nav; 
+         align-items: center;
+         align-self: center;
+         text-align: center;
+         
+     }
+    nav ul{
+        
+        display: grid;
+        width: 95%;
+        margin: auto;
+        padding: 5px;
+        list-style-type: none; 
+        grid-template-rows: repeat(6,1fr);  
+        grid-template-columns: 90% ;
+        grid-template-areas:    "realisation" 
+                                 "service"
+                                 "a_propos"
+                                "contact"
+                                 "materiaux"
+                                 "connexion" ;
+        column-gap: 15px;
+    }
+    .pagelogin{
+        grid-template-rows:auto;
+        
+    }
+    #loginform{
+        grid-template-columns: 100%;
+        grid-template-rows:auto;
+        grid-template-areas: 'centre';
+        align-items: center;
+        margin-top: 40px;
+        margin-bottom: 250px;
+    }
+    
+    
+    #infologin{
+    
+        grid-area: centre;
+        grid-template-columns: repeat(4,25%);
+        grid-template-rows:repeat(6,auto);
+        grid-template-areas: 'a a a a'
+                             'b b b b'
+                             ' e f f h'
+                             'i i j j '
+                             'm m o o '
+                             'q s s t ';
+        align-items: center;
+        text-align: center;
+       
+        
+    
+    }
+    #alert{
+        grid-area: b;
+    }
+    #connecter{
+        grid-area: a;
+        margin:20px;
+    }
+    #h1connexion{
+        grid-area: f;
+        margin:20px;
+        font-size: 34px;
+    }
+    #lbluserconnexion{
+        grid-area: i;
+       
+    }
+    #inputUsername{
+        grid-area: j;
+        margin-right:20px;
+        width: 100%;
+        text-align: center;
+    }
+    #lblpasswordconnexion{
+        grid-area: m;
+      
+    }
+    #inputPassword{
+        grid-area: o;
+        margin-top:20px;
+        margin-right:20px;
+        width: 100%;
+        text-align: center;
+    }
+    #imagelogin{
+    grid-area: gauche;
+    
+    }
+    #btnconnexion{
+        grid-area: s;
+        margin:20px;
+        height: 30px;
+         width: 100%;
+        text-align: center;
+    }
+    .foot{
+        position:relative;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        display: grid ;
+        font-size: 20px;
+        background-color:rgba(192, 193, 194,0.9);
+       
+       grid-template-rows:repeat(4,auto);
+        grid-template-columns: repeat(25%,75%) ;
+        grid-template-areas: 'a b'
+                            'c d'
+                            'e f'
+                            'g h';
+                                            ;
+         text-align: center;                    
+          align-items: baseline;                     
+    }
+    footer div:first-of-type{
+        grid-area: a;
+        text-align: left;
+    
+    }
+    
+    footer div:nth-of-type(2){
+        grid-area: c;
+        text-align: left;
+        padding-right: 10px;
+    
+    }
+    footer div:nth-of-type(3){
+        grid-area: e;
+        text-align: left;
+        padding-right: 10px;
+    }
+    footer div:nth-of-type(4){
+        grid-area: g;
+        text-align: left;
+        padding-right: 10px;
+    }
+    footer p:first-of-type{
+        grid-area: b;
+    
+    }
+    
+    footer p:nth-of-type(2){
+        grid-area: d;
+       
+    
+    }
+    footer p:nth-of-type(3){
+        grid-area: f;
+     
+    }
+    footer p:nth-of-type(4){
+        grid-area: h;
+    
+  }
+}
