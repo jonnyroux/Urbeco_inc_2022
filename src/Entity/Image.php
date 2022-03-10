@@ -40,7 +40,7 @@ class Image
      * @var Materiaux
      *
      * @ORM\ManyToOne(targetEntity="Materiaux", inversedBy="image")
-     * @ORM\JoinColumn(nullable=false, referencedColumnName="materiaux_id")
+     * @ORM\JoinColumn(nullable=true, referencedColumnName="materiaux_id")
      * */
     
     private $materiaux;

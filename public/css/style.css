@@ -1114,7 +1114,7 @@ footer p:nth-of-type(4){
         background-color:rgba(192, 193, 194,0.9);
        
        grid-template-rows:repeat(4,auto);
-        grid-template-columns: repeat(25%,75%) ;
+        grid-template-columns: 25% 75% ;
         grid-template-areas: 'a b'
                             'c d'
                             'e f'
@@ -1163,4 +1163,207 @@ footer p:nth-of-type(4){
         grid-area: h;
     
   }
+  .produitIndividuel .img{
+    padding: 5px;
+    margin-bottom: 5px;
+   
+}
+.h1prduit{
+    text-align: center;
+    font-size: 45px;
+}
+
+.containerProduit{
+    display: flex;
+    width: 100%;
+    margin: 5px;
+    padding: 10px;
+    flex-wrap: wrap;
+    align-content: center;    
+}
+
+.produitIndividuel{
+    display: block;
+    width: 33.33%;
+    margin: 5px;
+    background-color:rgba(192, 193, 194,0.9);
+    text-align: center;
+    flex-shrink: 0;
+    padding: 5px;
+    
+
+}
+
+.lien{
+    text-decoration: none;
+    color: rgb(53, 5, 46);
+}
+
+.nomProduit{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+/** page À popos **/
+
+#propos {
+    display: grid;
+    
+    width: 100%;
+    margin-bottom: 20px;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(2,auto);
+    grid-template-areas: 'haut'
+                          'bas';
+}
+#propos div:first-of-type{
+    grid-area: haut;
+    width: 100%;
+}
+#propos div:nth-of-type(2){
+    grid-area: bas;
+}
+#cont{
+    margin-top: 50px;
+    margin-bottom:50px;
+}
+#pictcreator {
+    width: 100%;
+    box-shadow: 25px 25px 5px rgba(191, 116, 128, 0.15);
+}
+@keyframes anim{
+    from {
+      opacity: 0%;
+      left: 0;
+      transform: translateX(-15px)
+    }
+    to {
+      opacity: 100%;
+    }
+  }
+#creator {
+    animation-name: anim;
+    animation-duration: 4s;
+    text-align: justify;
+    background-color:rgba(192, 193, 194, 0.8);
+    border-radius: 5px;
+    font-size: 28px;
+    
+    padding: 5px;
+}
+
+#creatorname {
+    
+    text-align: center;
+    padding-bottom: 30px;
+
+}
+
+.formProduit {
+    grid-template-columns: 90%;
+    grid-template-rows:repeat(2,auto);
+    grid-template-areas: 'fA'
+                         'fI';
+    padding: 10px;
+}
+
+.botnform{    
+    background-color:rgba(192, 193, 194,0.8);
+    border:   2px solid  #383737;
+    border-radius: 5px;
+    width:90%;
+    height: 10%;
+    display: block;
+    margin: 1% auto;
+    text-decoration: none;  
+    color: black;
+    font-size: 15px;
+    text-align: center;
+}
+
+
+.formImage {
+    width: 90%;
+    margin-right:auto ;
+    align-items: center;
+    grid-area: fI;
+}
+.formulaire{
+    width: 90%;
+}
+.imageProduit{
+  text-align: center;
+    flex-direction: column;
+    padding: 5px;
+}
+#materiaux_image{
+   
+    width: 350px;
+}
+#projet_image{
+   
+    width: 350px;
+}
+.formAttribut {
+    width: 90%;
+    margin: 5px;
+    align-items: center;
+    grid-area: fA;
+    padding: 10px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3,auto);
+    grid-template-areas: 'nomProduit'
+                         'description'
+                         'inventaire';
+  
+}
+ .formProduit input {
+    float: right;
+
+}
+.formProduit label{
+    float : left;
+    font-weight: normal;
+    padding:5px;
+    
+}
+#materiaux_description{
+    width: 350px; 
+    float: right;
+    align-items: flex-start;
+    margin-bottom: 20px;
+     
+  }
+  #materiaux_quantite{
+      width: 350px; 
+     height: 40px;
+  }
+  #materiaux_nom,#projet_titre{
+      width: 350px; 
+      height: 40px;
+  }
+.nomProduit{
+    grid-area: nomProduit;
+    font-size: 20px;
+   
+}
+#projet_description{
+   float: right;
+   width: 350px; 
+}
+
+.description{
+    grid-area: description;
+    font-size: 32px;
+    text-align: left;
+}
+
+.formProduit .image{
+    font-size: 20px;
+    background-color:rgba(192, 193, 194,0.8);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
 }
