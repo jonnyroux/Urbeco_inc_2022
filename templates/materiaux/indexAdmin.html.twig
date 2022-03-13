@@ -13,20 +13,20 @@
                 <th>Nom</th>
                 <th>Quantite</th>
                 <th>Description</th>
-                <th>actions</th>
+            
             </tr>
         </thead>
         <tbody>
         {% for materiaux in materiauxes %}
             <tr>
                 
-                <td>{{ materiaux.nom }}</td>
+                <td>{{ materiaux.nom }} </br>
+                <a href="/materiaux/{{materiaux.materiauxid}}/edit">Modifier</a>
+                <a href="/materiaux/{{materiaux.materiauxid}}">Voir</a>
+                </td>
                 <td>{{ materiaux.quantite }}</td>
                 <td>{{ materiaux.description }}</td>
-                <td>
-                    <a href="/materiaux/{{materiaux.materiauxid}}">Voir</a>
-                    <a href="/materiaux/{{materiaux.materiauxid}}/edit">Modifier</a>
-                </td>
+               
             </tr>
         {% else %}
             <tr>
